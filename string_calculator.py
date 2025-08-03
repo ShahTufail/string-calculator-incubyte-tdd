@@ -2,4 +2,5 @@ class StringCalculator:
     def add(self, numbers: str) -> int:
         if numbers == "":
             return 0
-        return int(numbers)
+        parts = numbers.split(",")
+        return sum(int(p) for p in parts)
